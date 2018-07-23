@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MarathonSkills2015DataSet1" targetNamespace="http://tempuri.org/MarathonSkills2015DataSet1.xsd" xmlns:mstns="http://tempuri.org/MarathonSkills2015DataSet1.xsd" xmlns="http://tempuri.org/MarathonSkills2015DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MarathonSkills2015ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MarathonSkills2015ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ITSSB.Properties.Settings.GlobalReference.Default.MarathonSkills2015ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SponsorshipTableAdapter" GeneratorDataComponentClassName="SponsorshipTableAdapter" Name="Sponsorship" UserDataComponentName="SponsorshipTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MarathonSkills2015ConnectionString (Settings)" DbObjectName="MarathonSkills2015.dbo.Sponsorship" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT SponsorName, Amount FROM dbo.Sponsorship</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SponsorName" DataSetColumn="SponsorName" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MarathonSkills2015DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="MarathonSkills2015DataSet1" msprop:Generator_UserDSName="MarathonSkills2015DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Sponsorship" msprop:Generator_TableClassName="SponsorshipDataTable" msprop:Generator_TableVarName="tableSponsorship" msprop:Generator_TablePropName="Sponsorship" msprop:Generator_RowDeletingName="SponsorshipRowDeleting" msprop:Generator_RowChangingName="SponsorshipRowChanging" msprop:Generator_RowEvHandlerName="SponsorshipRowChangeEventHandler" msprop:Generator_RowDeletedName="SponsorshipRowDeleted" msprop:Generator_UserTableName="Sponsorship" msprop:Generator_RowChangedName="SponsorshipRowChanged" msprop:Generator_RowEvArgName="SponsorshipRowChangeEvent" msprop:Generator_RowClassName="SponsorshipRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SponsorName" msprop:Generator_ColumnVarNameInTable="columnSponsorName" msprop:Generator_ColumnPropNameInRow="SponsorName" msprop:Generator_ColumnPropNameInTable="SponsorNameColumn" msprop:Generator_UserColumnName="SponsorName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
